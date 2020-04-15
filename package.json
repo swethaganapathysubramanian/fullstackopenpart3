@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "test",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui": "(if exist build rmdir /s /q build) && cd ../../fullStackOpen/part2/phonebook && xcopy build ..\\fullstackopenpart3\\build\\ /s /e /y /i"
   },
   "author": "swetha",
   "license": "ISC",

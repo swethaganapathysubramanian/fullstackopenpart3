@@ -3,8 +3,10 @@ const app = express();
 const cors = require('cors');
 var morgan = require('morgan')
 
+//3.9,3.10,3.11 deployment and frontend connection
 app.use(express.static('build'))
 app.use(cors())
+
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 

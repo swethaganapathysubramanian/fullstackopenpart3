@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "test",
     "dev": "nodemon index.js",
-    "build:ui": "(if exist build rmdir /s /q build) && cd ../../fullStackOpen/part2/phonebook && xcopy build ..\\fullstackopenpart3\\build\\ /s /e /y /i"
+    "build:ui": "(if exist build rmdir /s /q build) && cd ../../../../fullStackOpen/part2/phonebook && xcopy build ..\\fullstackopenpart3\\build\\ /s /e /y /i"
   },
   "author": "swetha",
   "license": "ISC",
@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.9",
+    "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0"
   }
 }

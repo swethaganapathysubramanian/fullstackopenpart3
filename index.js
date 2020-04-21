@@ -39,17 +39,18 @@ app.get('/', (req, res) => {
 //3.13
 app.get('/api/persons', (req,res) => {
   Person.find({}).then(people => {
-    console.log(people)
     res.json(people.map(person => person.toJSON()))
-
   })
 })
 
 //info page 3.2
 app.get('/api/info', (req,res) => {
-  const len = Person.find({}).then(people => people.length)
+  var len = 0
   const date = Date()
-  res.send(`<p>Phonebook has info of ${len} people </p> ${date}`)
+  Person.find({}).then(people => {
+    len = people.length
+    res.send(`<p>Phonebook has info of ${len} people </p> ${date}`)
+  })
 })
 
 //single person record 3.3

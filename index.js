@@ -80,7 +80,7 @@ app.delete('/api/persons/:id', (req, res, next) => {
   //persons = persons.filter(person => person.id !== id)
   Person.findByIdAndDelete(id)
     .then(result => {
-      console.log(result)
+      res.status(204).end()
     })
     .catch(err => next(err))
 })

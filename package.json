@@ -7,11 +7,13 @@
     "start": "node index.js",
     "test": "test",
     "dev": "nodemon index.js",
-    "build:ui": "(if exist build rmdir /s /q build) && cd ../../../../fullStackOpen/part2/phonebook && xcopy build ..\\fullstackopenpart3\\build\\ /s /e /y /i"
+    "build:ui": "(if exist build rmdir /s /q build) && cd ../../../../fullStackOpen/part2/phonebook && xcopy build ..\\fullstackopenpart3\\build\\ /s /e /y /i",
+    "lint": "eslint ."
   },
   "author": "swetha",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.8.0",
     "nodemon": "^2.0.3"
   },
   "dependencies": {
